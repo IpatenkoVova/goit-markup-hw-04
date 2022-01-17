@@ -165,6 +165,16 @@ ul {
   text-decoration: none;
   color: var(--address-link-color);
 }
+.tel-icon {
+  display: inline-block;
+  width: 10px;
+  height: 16px;
+}
+.mail-icon {
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+}
 .visially-hidden {
   position: absolute;
   width: 1px;
