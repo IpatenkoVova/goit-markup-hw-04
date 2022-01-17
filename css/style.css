@@ -167,11 +167,13 @@ ul {
 }
 .tel-icon {
   display: inline-block;
+  margin-right: 10px;
   width: 10px;
   height: 16px;
 }
 .mail-icon {
   display: inline-block;
+  margin-right: 10px;
   width: 16px;
   height: 12px;
 }
