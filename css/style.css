@@ -4,6 +4,7 @@
   --initial-text-color: #757575;
   --address-link-color: #ffffff;
   --card-gap: 30px;
+  --icon-border-color: #afb1b8;
 }
 *,
 *::before,
@@ -53,6 +54,12 @@ ul {
 .footer-site-logo .logo-web {
   color: #2196f3;
 }
+
+.join-text {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
 .address-footer {
   margin-top: 20px;
   font-style: normal;
@@ -117,29 +124,9 @@ ul {
   text-decoration: none;
   color: var(--initial-text-color);
 }
-.header-contacts-link :hover,
-.header-contacts-link :focus {
-  color: var(--accent-link-color);
-}
-.mail::before {
-  display: inline-block;
-  content: '';
-  width: 16px;
-  height: 12px;
+.icon {
   margin-right: 10px;
-  background-image: url('../images/envelope.svg');
-  background-size: contain;
 }
-.tel::before {
-  display: inline-block;
-  content: '';
-  width: 10px;
-  height: 16px;
-  margin-right: 17.5px;
-  background-image: url('../images/tel.svg');
-  background-size: contain;
-}
-
 .footer-contacts-link {
   text-decoration: none;
   font-size: 14px;
@@ -165,17 +152,16 @@ ul {
   text-decoration: none;
   color: var(--address-link-color);
 }
-.tel-icon {
-  display: inline-block;
-  margin-right: 10px;
-  width: 10px;
-  height: 16px;
+
+.header-contacts-link:hover,
+.header-contacts-link:focus {
+  color: var(--accent-link-color);
 }
-.mail-icon {
-  display: inline-block;
-  margin-right: 10px;
-  width: 16px;
-  height: 12px;
+.header-contacts-link:hover,
+.icon,
+.header-contacts-link:focus,
+.icon {
+  fill: currentColor;
 }
 .visially-hidden {
   position: absolute;
@@ -184,13 +170,11 @@ ul {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 .container {
   margin: 0 auto;
   width: 1200px;
@@ -282,6 +266,14 @@ ul {
 .section-team .item:not(:last-child) {
   margin-right: 30px;
 }
+.section-team .item {
+  background: #ffffff;
+}
+.worker-card-background {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
 .section-features-title {
   margin-bottom: 10px;
   font-size: 14px;
@@ -305,6 +297,7 @@ ul {
 .team-section {
   background-color: #f5f4fa;
 }
+
 .worker-card-content {
   padding: 30px 0;
 }
@@ -329,6 +322,41 @@ ul {
   letter-spacing: 0.03em;
 }
 
+.permanent-clients {
+  padding: 94px 0;
+}
+.permanent-clients-title {
+  text-align: center;
+}
+.permanent-clients-list {
+  display: flex;
+}
+
+.permanent-clients-item:not(:last-child) {
+  margin-right: var(--card-gap);
+}
+.permanent-clients-item {
+  margin-top: 50px;
+  width: 170px;
+  height: 92px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--icon-border-color);
+  border-radius: 4px;
+}
+
+.permanent-clients-item:hover {
+  border-color: var(--accent-link-color);
+  /* color: var(--accent-link-color); */
+}
+
+.permanent-clients-link:focus,
+.permanent-clients-link:hover {
+  color: var(--accent-link-color);
+  /* background-color: var(--accent-link-color); */
+}
+
 .portfolio-section {
   display: flex;
   flex-wrap: wrap;
@@ -339,6 +367,11 @@ ul {
   flex-basis: calc(100% / 3 - var(--card-gap));
   margin-right: var(--card-gap);
   margin-top: var(--card-gap);
+}
+.portfolio-section .item:hover {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .button-section {
@@ -384,6 +417,60 @@ img {
   line-height: 1.9;
   letter-spacing: 0.03em;
 }
+.footer-container {
+  display: flex;
+}
+.footer-join {
+  min-width: 206px;
+  margin-left: 70px;
+}
+.icons-section {
+  display: flex;
+  justify-content: center;
+}
+.icon-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icon-link:hover,
+.icon-link:focus {
+  background-color: var(--accent-link-color);
+}
+.icons-section-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-bottom: var(--card-gap);
+}
+.icon-section-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.footer-icon {
+  fill: currentColor;
+}
+
+.icon-section-link:focus,
+.icon-section-link:hover {
+  background-color: var(--accent-link-color);
+}
+
 .footer {
   padding: 60px 0;
   background-color: #2f303a;
